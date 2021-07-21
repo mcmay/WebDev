@@ -14,7 +14,7 @@ fi
 touch ../../Studying/htm_samples_with_tests/temp1.htm
 
 #Second step: append beforeHead.htm to the new file
-cat ./beforeHead.htm > ../../Studying/htm_samples_with_tests/temp1.htm
+cat ./beforeBody.htm > ../../Studying/htm_samples_with_tests/temp1.htm
 
 #Third step: read the body part of $1 into temp2.htm
 ./getBodyElement ../../Studying/raw_htm_samples/$1.htm
