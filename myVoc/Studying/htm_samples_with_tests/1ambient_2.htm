@@ -1,0 +1,784 @@
+<html>
+
+<head>
+<META HTTP-EQUIV="MSThemeCompatible" CONTENT="Yes" />
+<meta http-equiv="Content-Type" content="text/html; charset=unicode" />
+<meta http-equiv="X-UA-Compatible" content="IE=6" />
+<title></title>
+<STYLE type="text/css">
+	body, table, th, td	{	
+		font-family: "Tahoma", "Arial"; 
+		font-size: 15pt; 
+		line-height: 120%;
+		margin-left: 	25%;
+		margin-right:	20%;
+		background-color: #d8b693;
+		padding-top: 	70px;
+	}
+	ol	{	line-height: 140%; margin: 0px 0px 0px 36px	}
+	ul	{	line-height: 140%; margin: 0px 0px 0px 18px	}
+	hr	{	color: #E0E0E0; height: 1px	}
+
+	a:link       { color: #0000FF; text-decoration: none }
+	a:visited    { color: #0000FF; text-decoration: none }
+	a:hover      { color: #FF0000; text-decoration: none }
+	a:active     { color: #FF0000; text-decoration: none }
+
+	a:link.a1 		{ color: #0000FF; text-decoration: none }
+	a:visited.a1 	{ color: #0000FF; text-decoration: none }
+	a:hover.a1    { color: #FF0000; text-decoration: none }
+	a:active.a1   { color: #FF0000; text-decoration: none }
+
+	a:link.red    { color: #CC2200; text-decoration: none }
+	a:visited.red { color: #CC2200; text-decoration: none }
+	a:hover.red   { color: #FF0000; text-decoration: underline }
+	a:active.red  { color: #FF0000; text-decoration: underline }
+
+	a:link.green    { color: #00BB33; text-decoration: none }
+	a:visited.green { color: #00BB33; text-decoration: none }
+	a:hover.green   { color: #FF0000; text-decoration: underline }
+	a:active.green  { color: #FF0000; text-decoration: underline }
+
+	a:link.gray    { color: #808080; text-decoration: none }
+	a:visited.gray { color: #808080; text-decoration: none }
+	a:hover.gray   { color: #FF0000; text-decoration: underline }
+	a:active.gray  { color: #FF0000; text-decoration: underline }
+	
+	a:link.blue    { color: #7090D0; text-decoration: none }
+	a:visited.blue { color: #7090D0; text-decoration: none }
+	a:hover.blue   { color: #FF0000; text-decoration: underline }
+	a:active.blue  { color: #FF0000; text-decoration: underline }
+
+	a:link.msg 		{ color: #7DA1CD; text-decoration: none }
+	a:visited.msg { color: #7DA1CD; text-decoration: none }
+	a:hover.msg   { color: #FF0000; text-decoration: none }
+	a:active.msg  { color: #FF0000; text-decoration: none }
+
+	a:link.ref    { color: #0000FF; text-decoration: none }
+	a:visited.ref { color: #0000FF; text-decoration: none }
+	a:hover.ref   { color: #FF0000; text-decoration: none }
+	a:active.ref  { color: #FF0000; text-decoration: none }
+
+	a:link.syn    { color: #0040FF; text-decoration: none }
+	a:visited.syn { color: #0040FF; text-decoration: none }
+	a:hover.syn   { color: #FF0000; text-decoration: none }
+	a:active.syn  { color: #FF0000; text-decoration: none }
+
+	a:link.ant 		{ color: #20CA00; text-decoration: none }
+	a:visited.ant	{ color: #20CA00; text-decoration: none }
+	a:hover.ant   { color: #FF0000; text-decoration: none }
+	a:active.ant  { color: #FF0000; text-decoration: none }
+
+	.msg 		{ color: #7DA1CD; }
+
+	.btn1_mouse_over
+	{
+		color: #0000FF;
+		cursor: pointer;
+		background-Color: #F2F5FB; 
+		padding: 2px;
+		border-left:   1px solid #AEBADF;
+		border-top:    1px solid #AEBADF;
+		border-right:  1px solid #4F6BA0;
+		border-bottom: 1px solid #4F6BA0;
+	}
+
+	.btn1_mouse_out
+	{
+		color: #000080;
+		cursor: pointer;
+		background-Color: #FFFFFF; 
+		padding: 2px;
+		border: 1px solid #FFFFFF;
+	}
+
+	.btn1_mouse_down
+	{
+		color: #000080;
+		cursor: pointer;
+		background-Color: #F2F5FB; 
+		padding: 3px 1px 1px 3px;
+		border-left:   1px solid #4F6BA0;
+		border-top:    1px solid #4F6BA0;
+		border-right:  1px solid #AEBADF;
+		border-bottom: 1px solid #AEBADF;
+	}
+
+	.btn1_mouse_up
+	{
+		color: #0000FF;
+		cursor: pointer;
+		background-Color: #F2F5FB; 
+		padding: 2px;
+		border-left:   1px solid #AEBADF;
+		border-top:    1px solid #AEBADF;
+		border-right:  1px solid #4F6BA0;
+		border-bottom: 1px solid #4F6BA0;
+	}
+
+	.btn2_mouse_over
+	{
+		color: #0000FF;
+		cursor: pointer;
+		padding: 1px;
+	}
+
+	.btn2_mouse_out
+	{
+		color: #000080;
+		cursor: pointer;
+		padding: 1px;
+	}
+
+	.btn2_mouse_down
+	{
+		color: #0000FF;
+		cursor: pointer;
+		padding: 2px 1px 0px 1px;
+	}
+
+	.btn2_mouse_up
+	{
+		color: #0000FF;
+		cursor: pointer;
+		padding: 1px;
+	}
+
+	.lgsp_toolbutton {
+		padding: 2px;
+		margin-right: 10px;
+		color: #7DA1CD;
+		cursor: pointer;
+		float: left;
+	}
+
+	.lgsp_panel_sel {
+		background-color: #FFFFFF;
+		color: #5379BC;
+		padding: 2px 10px 2px 10px;
+		border-top: 1px solid #DCE7F4;
+		border-left: 1px solid #DCE7F4;
+		border-right: 1px solid #DCE7F4;
+		border-bottom: 1px solid #FFFFFF;
+		cursor: pointer;
+		float: left;
+	}
+	
+	.lgsp_panel_nosel {
+		background-color: #EAF0F8;
+		color: #5379BC;
+		padding: 2px 10px 2px 10px;
+		border-top: 1px solid #DCE7F4;
+		border-left: 1px solid #DCE7F4;
+		border-right: 1px solid #DCE7F4;
+		border-bottom: 1px solid #DCE7F4;
+		cursor: pointer;
+		float: left;
+	}
+	
+	.lgsp_panel_sp {
+		background-color: transparent;
+		color: #5379BC;
+		padding: 3px 10px 2px 10px;
+		border-bottom: 1px solid #DCE7F4;
+	}
+	.emph {
+		color: 			red;
+		font-style: 	italic;
+	}
+	#wordArea {
+		position: 				absolute;
+		border-spacing: 		10px;
+		background-image: 		url(../images/image26.jpg);
+		background-repeat: 		no-repeat;
+		/*display: 				table-cell;*/
+		text-align: 			left;
+		border-style: 			dotted;
+		height: 				650px;
+		width: 					810px;
+		padding: 				40px 40px 40px 40px;
+	}
+	#word {
+		font-weight: 	bold;
+		margin-top:		20px;
+	}
+	.colloc {
+		color:		purple;
+		font-style: italic;
+	}
+</style>
+<script language="javascript" type="text/javascript">
+
+function lgPassVar(url, isStreaming) {
+	var ap = document.getElementById('lingoes_ap');
+	if(ap) {
+		if("SetVariable" in ap) {
+			ap.SetVariable("url", url);
+			ap.SetVariable("isStreaming", isStreaming);
+			return true;
+		}
+	}
+
+	return false;
+}
+
+// for flash
+function lgPlayAudio(url, isStreaming) {
+	// url = *.mp3 file address
+	// isStreaming = "y" or "n"
+	var ap = document.getElementById('lingoes_ap');
+	if(ap) {
+		if(("SetVariable" in ap) && ("TCallFrame" in ap)) {
+			ap.SetVariable("url", url);
+			ap.SetVariable("isStreaming", isStreaming);
+			ap.TCallFrame("player", 0);
+			return true;
+		}
+	}
+	
+	return false;
+}
+
+// Only for IE9+/HTML5
+function lgPlayAudio5(audioplayer_id, audio_url)
+{
+  var ap = document.getElementById(audioplayer_id);
+  if(ap)
+  {
+	  ap.src = audio_url;
+	  ap.play();
+		return true;
+	}
+	
+	return false;
+}
+
+// 显示/隐藏指定元素
+//   sID: 元素ID, 字符型
+//   nShow: 显示方式, 整形, =1 显示, =-1 隐藏, =0 自动切换显示/隐藏状态
+function lgShowElement(sID, nShow) {
+	var obj = document.getElementById(sID);
+	if(obj) {
+		if(nShow > 0) {
+			obj.style.display = "";
+		}
+		else if(nShow < 0) {
+			obj.style.display = "none";
+		}
+		else {
+			if(obj.style.display == "none")
+				obj.style.display = "";
+			else
+				obj.style.display = "none";
+		}
+		
+		return true;
+	}
+
+	return false;
+}
+
+// 切换面板, 面板名称必须是从0开始的连续值
+function lgspSelectPanel(nPanel, sPanelPrefix, sClassPrefix)
+{
+	var i = 0;
+	var head;
+	while(true)
+	{
+		var head = document.getElementById(sPanelPrefix + 'head_' + i);
+		if(head)
+		{
+			if(i == nPanel)
+			{
+				lgShowElement(sPanelPrefix + i, 1);
+				head.className = sClassPrefix + 'sel';
+			}
+			else
+			{
+				lgShowElement(sPanelPrefix + i, -1);
+				head.className = sClassPrefix + 'nosel';
+			}
+		}
+		else
+		{
+			break;
+		}
+		
+		i++;
+	}
+}
+
+</script><BODY ondragstart="return false" style="OVERFLOW-X: hidden; OVERFLOW-Y: auto" bottomMargin=0 bgColor=#fffef2 leftMargin=0 topMargin=0 rightMargin=0><DIV id=main style="FONT-SIZE: 9pt; HEIGHT: 100%; FONT-FAMILY: 'Tahoma', 'Arial'" dir=ltr>
+<DIV id=main_info style="DISPLAY: none"></DIV>
+<DIV id=main_wnd>
+<DIV id=lingoes_dictarea></DIV>
+<DIV id=dict_DD900E7D1A47994CB52F0BFC7C75D11E style="FONT-SIZE: 14pt; FONT-FAMILY: 'Tahoma'; WIDTH: 100%; PADDING-BOTTOM: 0px; PADDING-TOP: 10px; PADDING-LEFT: 10px; LINE-HEIGHT: 1.2em; PADDING-RIGHT: 10px" groupid="2" dictid="DD900E7D1A47994CB52F0BFC7C75D11E">
+<TABLE id=dict_head_DD900E7D1A47994CB52F0BFC7C75D11E onselectstart="return true" cellSpacing=0 cellPadding=0 border=0>
+<TBODY>
+<TR>
+<TD style="FONT-SIZE: 10.5pt; BORDER-TOP: #92b0dd 1px solid; FONT-FAMILY: 'Tahoma'; BORDER-RIGHT: #92b0dd 1px solid; BACKGROUND: #cfddf0; BORDER-BOTTOM: #92b0dd 1px solid; COLOR: #000080; BORDER-LEFT: #92b0dd 1px solid; LINE-HEIGHT: 1em" noWrap>
+<DIV onmouseup="this.className='btn2_mouse_up'" onclick="window.navigate('app://dictmenu/DD900E7D1A47994CB52F0BFC7C75D11E-2')" onmouseover="this.className='btn2_mouse_over'" onmousedown="this.className='btn2_mouse_down'" onmouseout="this.className='btn2_mouse_out'" id=dict_title_DD900E7D1A47994CB52F0BFC7C75D11E title="Dictionary menu" class=btn2_mouse_out style="MARGIN: 0px 3px 1px 0px"><IMG border=0 hspace=3 src="file:///C:/Users/SHARON~1/AppData/Local/Temp/Lingoes/Translator/2.9.2-us_20160126104450/dict/temp/DD900E7D1A47994CB52F0BFC7C75D11E/icon.png" width=16 align=absMiddle height=16><SPAN style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 4px">Merriam-Webster's Collegiate� Dictionary</SPAN><IMG border=0 src="file:///C:/Users/Sharon%20Li/AppData/Local/Lingoes/Translator/2.9.2-us_20160126104450/app_data/dict/image/menu.png" width=7 align=absMiddle height=4> </DIV></TD>
+<TD style="BORDER-BOTTOM: #92b0dd 1px solid"><IMG style="DISPLAY: none" border=0 hspace=5 src="file:///C:/Users/Sharon%20Li/AppData/Local/Lingoes/Translator/2.9.2-us_20160126104450/app_data/dict/image/sst.png" width=11 align=absMiddle height=8> </TD>
+<TD style="BORDER-BOTTOM: #92b0dd 1px solid" width="100%" align=right>
+<DIV style="OVERFLOW: hidden; CURSOR: hand; HEIGHT: 11px; WIDTH: 11px; VISIBILITY: hidden; MARGIN-RIGHT: 10px"><IMG onmouseup="this.style.marginLeft = '-11px'" onclick="window.navigate('app://remberword/DD900E7D1A47994CB52F0BFC7C75D11E-2') ;" onmouseover="this.style.marginLeft = '-11px'" onmousedown="this.style.marginLeft = '-11px'" onmouseout="this.style.marginLeft = '0px'" id=dict_remberword_DD900E7D1A47994CB52F0BFC7C75D11E title="Add the word to notebook" style="MARGIN-TOP: 0px; MARGIN-LEFT: 0px" border=0 src="file:///C:/Users/Sharon%20Li/AppData/Local/Lingoes/Translator/2.9.2-us_20160126104450/app_data/dict/image/remberword.png" width=22 height=11></DIV></TD>
+<TD style="BORDER-BOTTOM: #92b0dd 1px solid">
+<DIV style="OVERFLOW: hidden; CURSOR: hand; HEIGHT: 11px; WIDTH: 11px"><IMG onmouseup="this.style.marginLeft = '-11px'" onclick="window.navigate('app://hidemeaning/DD900E7D1A47994CB52F0BFC7C75D11E-2') ; this.style.marginTop = (parseInt(this.style.marginTop) == 0) ? '-11px' : '0px' ;" onmouseover="this.style.marginLeft = '-11px'" onmousedown="this.style.marginLeft = '-11px'" onmouseout="this.style.marginLeft = '0px'" id=dict_show_DD900E7D1A47994CB52F0BFC7C75D11E title="Minimize result" style="MARGIN-TOP: 0px; MARGIN-LEFT: 0px" border=0 src="file:///C:/Users/Sharon%20Li/AppData/Local/Lingoes/Translator/2.9.2-us_20160126104450/app_data/dict/image/expand.png" width=22 height=22></DIV></TD></TR></TBODY></TABLE>
+<DIV id=dict_body_DD900E7D1A47994CB52F0BFC7C75D11E>
+<DIV id=dict_gls_DD900E7D1A47994CB52F0BFC7C75D11E>
+<DIV style="MARGIN: 5px 0px">
+<DIV style="WIDTH: 100%">
+<DIV style="FLOAT: left; LINE-HEIGHT: normal"><IMG border=0 src="file:///C:/Users/Sharon%20Li/AppData/Local/Lingoes/Translator/2.9.2-us_20160126104450/app_data/dict/image/entry_p.png" width=10 align=absMiddle height=11>&nbsp;</DIV>
+<DIV style="WIDTH: 100%; OVERFLOW-X: hidden">
+<DIV style="COLOR: #808080; MARGIN: 0px 0px 5px; LINE-HEIGHT: normal"><SPAN style="FONT-SIZE: 14pt; COLOR: #000000; LINE-HEIGHT: normal"><B><SUP style="FONT-SIZE: 83%; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 2px; LINE-HEIGHT: normal; PADDING-RIGHT: 2px">1</SUP>am�bi�ent</B></SPAN> <SUP style="FONT-SIZE: 83%; LINE-HEIGHT: normal">1</SUP> &nbsp; &nbsp;<I><FONT color=#c00000>adj.</FONT></I></DIV>
+<DIV style="MARGIN: 0px 0px 5px">
+<TABLE cellSpacing=0 cellPadding=3 border=0>
+<TBODY>
+<TR vAlign=top>
+<TD style="VERTICAL-ALIGN: top" noWrap>Pronunciation:&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+<TD><B>'</B>am-b-Ynt</TD></TR>
+<TR vAlign=top>
+<TD style="VERTICAL-ALIGN: top" noWrap>Function:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+<TD><I>adjective</I></TD></TR>
+<TR vAlign=top>
+<TD style="VERTICAL-ALIGN: top" noWrap>Etymology:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+<TD>Latin <I>ambient-, ambiens,</I> present participle of <I>ambire</I> to go around, from <I>ambi-</I> + <I>ire</I> to go   more at <A href="dict://key.DD900E7D1A47994CB52F0BFC7C75D11E/ISSUE"><U>ISSUE</U></A></TD></TR>
+<TR vAlign=top>
+<TD style="VERTICAL-ALIGN: top" noWrap>Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+<TD>1596</TD></TR></TBODY></TABLE><BR><B>: </B>existing or present on all sides <B>: </B><A href="dict://key.DD900E7D1A47994CB52F0BFC7C75D11E/ENCOMPASSING"><U>ENCOMPASSING</U></A></DIV></DIV></DIV>
+<DIV style="WIDTH: 100%; MARGIN: 5px 0px 0px">
+<DIV style="FLOAT: left; LINE-HEIGHT: normal"><IMG border=0 src="file:///C:/Users/Sharon%20Li/AppData/Local/Lingoes/Translator/2.9.2-us_20160126104450/app_data/dict/image/entry_ph.png" width=10 align=absMiddle height=11>&nbsp;</DIV>
+<DIV style="WIDTH: 100%; OVERFLOW-X: hidden">
+<DIV style="COLOR: #808080; MARGIN: 0px 0px 5px; LINE-HEIGHT: normal"><SPAN style="FONT-SIZE: 14pt; COLOR: #000000; LINE-HEIGHT: normal"><B><SUP style="FONT-SIZE: 83%; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 2px; LINE-HEIGHT: normal; PADDING-RIGHT: 2px">2</SUP>ambient</B></SPAN> <SUP style="FONT-SIZE: 83%; LINE-HEIGHT: normal">2</SUP> &nbsp; &nbsp;<I><FONT color=#c00000>adj.</FONT></I></DIV>
+<DIV style="MARGIN: 0px 0px 5px">
+<TABLE cellSpacing=0 cellPadding=3 border=0>
+<TBODY>
+<TR vAlign=top>
+<TD style="VERTICAL-ALIGN: top" noWrap>Function:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+<TD><I>noun</I></TD></TR>
+<TR vAlign=top>
+<TD style="VERTICAL-ALIGN: top" noWrap>Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+<TD>1624</TD></TR></TBODY></TABLE><BR><B>1</B> <B>: </B>an encompassing atmosphere <B>: </B><A href="dict://key.DD900E7D1A47994CB52F0BFC7C75D11E/ENVIRONMENT"><U>ENVIRONMENT</U></A> <BR><B>2</B> <B>: </B>music intended to serve as an unobtrusive accompaniment to other activities (as in a public place) and characterized especially by quiet and repetitive instrumental melodies</DIV></DIV></DIV></DIV></DIV>
+<DIV id=dict_msg_DD900E7D1A47994CB52F0BFC7C75D11E class=msg style="FONT-SIZE: 12pt; FONT-FAMILY: 'Tahoma'; MARGIN: 5px 0px 10px; LINE-HEIGHT: normal">� 2005 Merriam-Webster, Incorporated</DIV></DIV></DIV></DIV></DIV></BODY>
+</html><script type="text/javascript">
+var italicCommentB4Subsenses = ''; 
+var wordSense;
+var meaningShown = false;
+	function findTheSenseText(partOfSpeechIndex, verbType, senseIndexNumber, senseIndexAlpha, senseSubindex) {
+		// verbType 1 == transitive, 2 == intranstive, 0 == non-verb
+		// 0 == senseIndexNumber not exist 'x' == senseIndexAlpha/senseSubindex not exist
+		var sups = document.getElementsByTagName("SUP");
+		var i, parentNode, targetNode, tableNode;
+		var senseNode = {part_of_speech: '', senseText: ''};
+		var tableElements;
+
+		if (sups.length == 0) {
+			tableElements = document.getElementsByTagName("TABLE");
+			if (tableElements.length) {
+				parentNode = tableElements[1].parentElement;
+				senseNode.senseText = findSense(parentNode, verbType, senseIndexNumber, senseIndexAlpha, senseSubindex);
+				senseNode.part_of_speech = getPartOfSpeech(verbType, tableNode, parentNode);
+			}
+			else
+				console.log("Can't find <table> elements!");
+		}
+		else { // sups.length != 0
+			
+			for (i = 0; i < sups.length; i++) {
+				if(sups[i].innerHTML == partOfSpeechIndex){
+					parentNode = sups[i].parentElement; // get the parent node (whose sibling contains the senses of the entry) of targeted partOfSpeech
+					break;
+				}
+			}	
+
+			if (parentNode) {
+				while(parentNode.tagName != "DIV") { // Go up skiping <span> until reaching the nearest DIV (beginning of the parent node)
+					parentNode = parentNode.parentElement;
+				}
+				targetNode = parentNode.nextSibling.nextSibling; // Skip #text and get next DIV which contains the block of the target part of speech
+
+				// get part of speech
+				senseNode.part_of_speech = getPartOfSpeech(verbType, tableNode, targetNode);
+
+				senseNode.senseText = findSense(targetNode, verbType, senseIndexNumber, senseIndexAlpha, senseSubindex);
+			}
+			else	{
+				console.log("Can't find parentNode!");
+			}
+		}
+		return senseNode;
+	}
+
+	function getPartOfSpeech (vType, tbNode, tNode) {
+		var part_of_speech, posNode;
+
+
+		if (vType == 0) {
+			tbNode = tNode.firstChild.nextSibling; // skip #text and get <table> under target DIV
+			posNode = tbNode.firstChild.nextSibling; // skip #text and get <tbody>
+			posNode = posNode.firstChild.nextSibling; // skip #text and get <tr> for Pronunciation
+			posNode = posNode.nextSibling.nextSibling; // skip #text and get <tr> contain Function and the actual part of speech
+			posNode = posNode.firstChild.nextSibling; // skip #text and get the second child of <tr>: Function node itself
+			posNode = posNode.nextSibling.nextSibling; // skip #text and get the <td> containing the actual part of speech
+			posNode = posNode.firstChild;
+			part_of_speech = posNode.innerHTML;
+		}
+		else {
+			part_of_speech = "verb";
+		}
+		return part_of_speech;
+	}
+
+	function findSense (tNode, vType, sIndexNumber, sIndexAlpha, sSubindex) {
+		var i = 0;
+		var sText = '';
+
+		if(tNode) {
+			if(vType) {
+				for (i = 0; i < tNode.childNodes.length; i++) { // Traverse through the childNodes of targeted DIV
+					if (tNode.childNodes[i].innerHTML != undefined) { // skip #text
+						if (vType === 1) { // transitive verb
+							if (tNode.childNodes[i].innerHTML == 'transitive verb' &&
+								tNode.childNodes[i].innerHTML != 'intranstive verb') {
+
+								sText = procNode(tNode.childNodes[i], vType, sIndexNumber, sIndexAlpha, sSubindex);
+								break;
+
+							}	
+						}
+						else if (vType === 2) { // intransitive verb
+							if (tNode.childNodes[i].innerHTML == 'intransitive verb') {
+													
+								sText = procNode(tNode.childNodes[i], vType, sIndexNumber, sIndexAlpha, sSubindex);
+								break;
+							}	
+						}
+					} // if immediately under for (...)	
+				} //(for ( ...))
+			}
+			else { // if it is not a verb
+				while(tNode.childNodes[i].innerHTML != undefined) {
+					i++;
+				}
+
+				sText = procNode(tNode.childNodes[i], vType, sIndexNumber, sIndexAlpha, sSubindex);
+			}
+
+		}
+		else {
+			console.log("Can't find targetNode!");
+		}
+		return sText
+	}
+	function replaceChar (str, charToBeReplaced, replacement){
+		var out = new String();
+		var len = str.length;
+
+		for (var i = 0; i < len; i++) {
+			if (str[i] == charToBeReplaced)
+				out = out.concat(replacement);
+			else
+				out = out.concat(str[i]);
+		}
+		return out;
+	}
+
+	function procNode(tNode, vbType, snsIdxNum, snsIdxAlpha, snsSubidx) {
+		var subChildNode = tNode.nextSibling;
+		var targetSense = '';
+		var indexOfSepcSym;
+		var subsenseIndexes = ["(1)", "(2)", "(3)", "(4)", "(5)", "(6)", "(7)", "(8)", "(9)", "(10)", "(11)", "(12)"];
+		var i;
+
+		/*while(subChildNode.innerHTML != undefined) { //Skip #text
+			subChildNode = subChildNode.nextSibling;
+			continue;
+		}
+		subChildNode = subChildNode.nextSibling; */
+
+		if (snsIdxNum != 0) {
+			if (snsIdxAlpha == '~') { 
+				subChildNode = findNode(subChildNode, snsIdxNum);
+
+			} // no subsense under a numbered sense
+			else if (snsIdxAlpha >= 'a' && snsIdxAlpha <= 'z') { // subsense labeled 'a', like '1 a', etc.
+				
+				if(snsSubidx == '~') {
+					snsIdxNum = snsIdxNum + ' ' + 'a';
+					subChildNode = findNode(subChildNode, snsIdxNum);
+					subChildNode = getSubsenseNode(subChildNode, snsIdxAlpha, 'a');
+				}
+				else {
+					for (i = 0; i < subsenseIndexes.length; i++) {
+						if (snsSubidx == subsenseIndexes[i]) // check snsSubidx exists or not
+							break;
+					}
+					if (i === subsenseIndexes.length)
+						alert("Wrong subsense index entered!");
+					else {
+						snsIdxNum = snsIdxNum + ' ' + 'a' + ' ' + '(1)';
+						subChildNode = findNode(subChildNode, snsIdxNum);
+						subChildNode = getSubsenseNode(subChildNode, snsSubidx, '(1)');
+					}
+				}
+			}
+			else {
+				alert("Wrong sense index letter entered!");
+			}
+		}
+		else { // snsIdxNum == 0
+			if(vbType == 1 || vbType == 2)
+				subChildNode = subChildNode.nextSibling; 
+			else
+				subChildNode = subChildNode.nextSibling.nextSibling;
+			// subChildNode on the right of the = sign is the <table> node
+			// subChildNode on the left side of the = sign is <b>: </b>, <br> skipped
+			
+			if(subChildNode.innerHTML == ': '){
+				subChildNode = subChildNode.nextSibling;
+			}
+		}
+		while(subChildNode && subChildNode.tagName != "BR" && subChildNode.tagName != "/DIV")
+		{
+			if(subChildNode.tagName == "B") { // to filter cases where there comes a bold-typed colon in the sense
+				if(subChildNode.innerHTML >= 'a' && subChildNode.innerHTML <= 'z'){
+					break; // if the innerHTML in the bold element is a letter, 
+				}
+				var found = false;
+				for (var i = 0; i < subsenseIndexes.length; i++) {
+					if (subChildNode.innerHTML == subsenseIndexes[i]) {
+						found = true;
+						break;
+					}
+				}
+				if(found)
+					break;
+			} // then next sense reached (hence the end of the needed sense)
+			targetSense = targetSense + subChildNode.textContent + ' ';
+			subChildNode = subChildNode.nextSibling; 
+		}
+		indexOfSepcSym = targetSense.indexOf('<');
+		if (indexOfSepcSym >= 0) {
+			targetSense = replaceChar (targetSense, '<', '&lt;');
+		}
+		indexOfSepcSym = targetSense.indexOf('>');
+		if (indexOfSepcSym >= 0) {
+			targetSense = replaceChar (targetSense, '>', '&gt;');
+		}
+
+		return targetSense;
+	}
+
+	function getSubsenseNode (ssNode, index, subIndexFirst) {
+		if (index != subIndexFirst) {
+			while (ssNode.innerHTML != index){
+				ssNode = ssNode.nextSibling;
+			} // get <b>snsIdxAlpha</b>
+			while(ssNode.innerHTML != ": ") {
+				ssNode = ssNode.nextSibling; // get rid of <b>: </b>
+			}
+			ssNode = ssNode.nextSibling; // reach sense text
+		}
+		return ssNode;
+	}
+
+	function findNode (nodeToFind, snsIdxNum) {
+		while (nodeToFind) {
+			if (nodeToFind.innerHTML != undefined && nodeToFind.innerHTML[0] == snsIdxNum[0])
+				break;
+            nodeToFind = nodeToFind.nextSibling; // find sense number node
+		}
+		
+		nodeToFind = nodeToFind.nextSibling; // skip #text
+		nodeToFind = nodeToFind.nextSibling;
+		
+		if(nodeToFind.tagName != 'I') { 
+			// Before the bold colon of some words, there is an italicized element
+			// In that case, the italicized element is reserved with the colon
+			while (nodeToFind.innerHTML != ': ')
+				nodeToFind = nodeToFind.nextSibling; // skip #text and ": "
+			if(nodeToFind.innerHTML == ': '){
+				nodeToFind = nodeToFind.nextSibling; 	
+			}
+		}
+		else {
+			italicCommentB4Subsenses += nodeToFind.innerHTML;
+			while (nodeToFind.innerHTML != ': ')
+				nodeToFind = nodeToFind.nextSibling; // skip #text and ": "
+			if(nodeToFind.innerHTML == ': '){
+				nodeToFind = nodeToFind.nextSibling; 	
+			}	
+		}
+		
+		return nodeToFind;
+	}
+	
+	function fileNameInterpreter () {
+		var fileNameProps = {
+			p_o_s:    	0,
+			vb_t: 	  	0, 
+			s_i_n: 		0,
+			s_i_a:  	'~',
+			s_s_i: 		'~',
+			entryWord:  '',
+			frequ: 		1
+		};
+		var receiveInput = prompt("Enter the file name:");
+		var prefix = '';
+		var i, j = receiveInput.indexOf(".");
+		var fileName;
+
+		if (j > 0) {
+			fileName = receiveInput.substring(0, j);
+		}
+		else
+			fileName = receiveInput;
+		if (fileName) {
+			
+			if (inRange(fileName[0], '1', '9')) { // NOTE: 9 is assumed to be the greatest but it may not be in actuality
+				fileNameProps.p_o_s = fileName[0];
+				prefix += fileName[0];
+				if (fileName[1] == '_' && (fileName[2] == 't' || fileName[2] == 'i')) {
+					if (fileName[2] == 't')
+						fileNameProps.vb_t = 1;
+					if (fileName[2] == 'i')
+						fileNameProps.vb_t = 2;
+
+					prefix += fileName[1];
+					prefix += fileName[2];
+					prefix += fileName[3]; // the last _ of a prefix e.g. 1_t_entry
+				}
+			}
+			if ((fileName[0] == 't' || fileName[0] == 'i') && fileName[1] == '_') {
+				if (fileName[0] == 't')
+					fileNameProps.vb_t = 1;
+				if (fileName[0] == 'i')
+					fileNameProps.vb_t = 2;
+				prefix += fileName[0];
+				prefix += fileName[1];
+			}
+			if ((inRange(fileName[0], 'A', 'Z') || inRange(fileName[0], 'a', 'z')) && fileName[1] != '_') {
+				fileNameProps.p_o_s = 0;
+				fileNameProps.vb_t = 0;
+			} 
+
+			// get entryWord
+			i = prefix.length; // starting from the first letter of the entry word
+			while (i < fileName.length) {
+				if (fileName[i] == '_' || inRange(fileName[i], '1', '9')) // Assume 9 is the greatest subsense index number
+					break;
+				fileNameProps.entryWord += fileName[i];
+				i++;
+			}
+
+			if (inRange(fileName[fileName.length-1], 'A', 'Z') || inRange(fileName[fileName.length-1], 'a', 'z')) {
+				if(inRange(fileName[fileName.length-2], '1', '9')) { // e.g. cat2a
+					fileNameProps.s_i_a = fileName[fileName.length-1];
+					fileNameProps.s_i_n = fileName[fileName.length-2]; // Assume 9 is the greatest subsense index number
+				}
+				if(fileName[fileName.length-2] == '_')
+					fileNameProps.s_i_a = fileName[fileName.length-1];
+			}
+			if (fileName[fileName.length-1] == ')') { //e.g. 1a(1)
+				fileNameProps.s_s_i += fileName[fileName.length-1];
+				fileNameProps.s_s_i += fileName[fileName.length-2];
+				fileNameProps.s_s_i += fileName[fileName.length-3];
+				fileNameProps.s_i_a = fileName[fileName.length-4];
+				fileNameProps.s_i_n = fileName[fileName.length-5]; // Assume 9 is the greatest subsense index number
+			}
+			if (inRange(fileName[fileName.length-1], '1', '9')) { 
+				if (fileName[fileName.length-2] == '_') {
+					fileNameProps.frequ = fileName[fileName.length-1];
+					if ((inRange(fileName[fileName.length-3], 'A', 'Z') || inRange(fileName[fileName.length-3], 'a', 'z')) 
+						&& inRange(fileName[fileName.length-4], '1', '9')) {// e.g. cat1a_2
+						fileNameProps.s_i_a = fileName[fileName.length-3];
+						fileNameProps.s_i_n = fileName[fileName.length-4]; // Assume 9 is the greatest subsense index number
+					}
+					if (fileName[fileName.length-3] == ')') { // e.g. cat1a(3)_2
+						fileNameProps.s_s_i += fileName[fileName.length-3];
+						fileNameProps.s_s_i += fileName[fileName.length-4];
+						fileNameProps.s_s_i += fileName[fileName.length-5];
+					}
+				}
+				else // e.g. cat1
+					fileNameProps.s_i_n = fileName[fileName.length-1]; // Assume 9 is the greatest subsense index number
+			}
+			if ((inRange(fileName[fileName.length-1], 'A', 'Z') || inRange(fileName[fileName.length-1], 'a', 'z')) && 
+				(inRange(fileName[fileName.length-2], 'A', 'Z') || inRange(fileName[fileName.length-2], 'a', 'z'))) {
+				// e.g. wombat (no suffix at all!)
+				fileNameProps.s_i_a = '~';
+				fileNameProps.s_s_i = '~';
+			}
+		}
+		return fileNameProps;
+	}
+
+	function inRange (fNameSuffix, start, end) {
+		return (fNameSuffix >= start && fNameSuffix <= end)
+	}
+
+	function writeAndDisplayExample () {
+		var ownExample = document.createElement("p")
+		var ownEx = prompt("Write your own example and display it on the page:");
+		ownExample.innerHTML = ownEx;
+		var refNode = document.getElementById("referenceNode");
+		refNode.parentNode.insertBefore(ownExample, refNode.nextSibling);
+	}
+
+	function showMeaning() {
+		if(meaningShown == false) {
+			var meaning = document.createElement("p");
+			meaning.innerHTML = wordSense.senseText;
+			var refNodeForMeaning = document.getElementById("refNd");
+			if(refNd)
+				refNodeForMeaning.parentNode.insertBefore(meaning, refNodeForMeaning.nextSibling);
+			else
+				console.log("Can't find refNd!");
+			meaningShown = true;
+		}
+	}
+	function printEntry() {
+		
+		var parameters = fileNameInterpreter();
+		if (parameters == null) {
+			alert("No parameters received! Bye!");
+			return;
+		}
+		// findTheSenseText(partOfSpeechIndex, verbType, senseIndexNumber, senseIndexAlpha, senseSubindex);
+		wordSense = findTheSenseText(parameters.p_o_s, parameters.vb_t, parameters.s_i_n, parameters.s_i_a, parameters.s_s_i);
+		var senseString = "<div id=wordArea><p id=word>"; 
+		var prePos = ' <i>';
+		var postPos = '.</i></p><p id=sense>';
+		var example = "</p><p>e.g. The skin cells of snails is very sensitive to the <span class=emph>ambient</span> temperature.</p>";
+		var frequReport = "You've met this word ";
+		var endOfSenseArea = " times</p><p>Click buttone to write and display your own example.</p><button onclick=\"writeAndDisplayExample()\">Try it.</button><p id=referenceNode>Your own example:</p><p></p></div>"; // <p></p> is the nextSibling of node (id = referenceNode)
+		var body = document.getElementsByTagName("body");
+		var testOrNot = prompt("Do you want to test for this word? (y/n)");
+
+	
+		if (wordSense.part_of_speech == "verb") {
+			if (parameters.vb_t == 1) {
+				wordSense.part_of_speech = "vt";
+			}
+			if (parameters.vb_t == 2) {
+				wordSense.part_of_speech = "vi";
+			}
+		}
+
+		if (testOrNot.toLowerCase() == "y") {
+			senseString = senseString + parameters.entryWord + prePos +  wordSense.part_of_speech + postPos + "<button onclick=\"showMeaning()\">Show Meaning</button><p id=refNd></p><p></p>" + example + frequReport + parameters.frequ + endOfSenseArea; // <p></p> is the nextSibling of node (id = referenceNode)
+		}
+		else if (testOrNot.toLowerCase() == "n") {
+			if (italicCommentB4Subsenses)
+				senseString = senseString + parameters.entryWord + prePos +  wordSense.part_of_speech + postPos + '<i>' + italicCommentB4Subsenses + "</i>"
+		        		      + '<b>:</b> ' + wordSense.senseText + example + frequReport + parameters.frequ + endOfSenseArea;	
+		    else 
+		    	senseString = senseString + parameters.entryWord + prePos +  wordSense.part_of_speech + postPos
+		                      + wordSense.senseText + example + frequReport + parameters.frequ + endOfSenseArea;
+		}
+		else {
+			prompt("Invalid option!");
+		}
+		body[0].innerHTML = senseString;
+	}
+	printEntry();
+</script>
