@@ -1,23 +1,24 @@
 This is an application for learning English vocabulary which enables the user to save a particular sense of a word with a certain part of speech into an html file.  The particular sense of the word is extracted from a source html file obtained by saving the search result of the Lingoes dictionary. I refer to the particular sense as the "target sense" in the rest of this document.
 
 This app is executed with a shell script, "scripthtm.sh", which
-
-  1) creates an empty html file, "temp1.htm", and copies the content of the "beforeBody.htm" file to temp1.htm. "beforeBody.htm" is the part of the aforementioned source html file before its <BODY> tag.
-  2) executes the C program "getBodyElement" program which copies the body section of the source html file to an html file, "temp2.htm";
-  3) moves "temp2.htm" to the "Studying/htm_samples_with_tests/" directory;
-  4) appends the content of "temp2.htm" to "temp1.htm";
-  5) appends "myScriptLast.htm" to "temp1.htm" so that now "temp1.htm" becomes a whole html file with a head and body with JavaScript code attached;
-  6) remove source html file and "temp2.htm";
-  7) rename "temp1.htm" to the name of the source html file (hereafter referred to as the "middle file").
-  8) executes the C program "insertTagsInExample" which 
+  
+  1) takes a command-line argument which is the file name of the source html file without the ".htm" extension, e.g. the "1_i_bawl1";
+  2) creates an empty html file, "temp1.htm", and copies the content of the "beforeBody.htm" file to temp1.htm. "beforeBody.htm" is the part of the aforementioned source html file before its <BODY> tag. This file was not written by me. It was part of the source html file.
+  3) executes the C program "getBodyElement" program which copies the body section of the source html file to an html file, "temp2.htm";
+  4) moves "temp2.htm" to the "Studying/htm_samples_with_tests/" directory;
+  5) appends the content of "temp2.htm" to "temp1.htm";
+  6) appends "myScriptLast.htm" to "temp1.htm" so that now "temp1.htm" becomes a whole html file with a head and body with the JavaScript code I wrote attached.
+  7) remove source html file and "temp2.htm";
+  8) rename "temp1.htm" to the name of the source html file (hereafter referred to as the "middle file").
+  9) executes the C program "insertTagsInExample" which 
       a) takes the middle file as an argument, 
       b) extracts from the file the particular sense signified by the tags in file's name, 
       c) asks for user input of a possible collocation and a possible example,
       d) inserts the collocation and example, if any, into the middle file, and
       e) writes the updated middle file to an html file, "temp3.htm".
-  9) remove the middle file and rename "temp3.htm" to name of the source htm file.
+  10) remove the middle file and rename "temp3.htm" to name of the source htm file.
   
-  While the resulting product file bears the name of the source htm file, it now has very much different contents and functionalities. It
+  While the resulting product file bears the name of the source htm file, it now has very much different contents and functionalities. With the aforementioned JavaScript written by me, it
   
   1) prompts the user to enter its file name when opened and asks the user to enter whether they wish to take a test; 
   2) displays the word in the file name entered by the user;'
