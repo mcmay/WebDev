@@ -23,10 +23,10 @@ cat ./beforeBody.htm > ../../Studying/htm_samples_with_tests/temp1.htm
 mv ~/temp2.htm ../../Studying/htm_samples_with_tests/
 
 #Fifth step: append temp2.htm to temp1.htm
-cat ../../Studying/temp2.htm >> ../Studying/htm_samples_with_tests/temp1.htm
+cat ../../Studying/htm_samples_with_tests/temp2.htm >> ../Studying/htm_samples_with_tests/temp1.htm
 
 #sixth step: append myScriptLast.htm to temp1.htm
-cat ../Samples_under_programming/combiner/myScriptLast.htm >> ../Studying/htm_samples_with_tests/temp1.htm
+cat ./myScriptLast.htm >> ../Studying/htm_samples_with_tests/temp1.htm
 
 #seventh step: remove $1.htm
 rm ../../Studying/htm_samples_with_tests/$1.htm
