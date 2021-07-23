@@ -1,0 +1,53 @@
+body { 
+  background-color: #7FDBFF;
+  font-family:      Georgia, "Times New Roman", Times, serif;
+  font-size:        medium;
+}
+
+h2,h3 {
+	margin-left: 	50px;
+}
+
+hr {
+    height:             2px;
+    width:              810px;
+    margin-left:        50px;
+    color:              gray;
+}
+
+ul {
+	list-style-type: none;
+	margin-left: 	50px;
+}
+
+p {
+	margin-left:   	50px;
+	font-weight: 	bold;
+}
+
+a {
+	font-size: 	120%;
+}
+
+a: link {
+	color: honeydew;
+}
+
+#contents {
+	border-style:   dashed;
+  border-color:   coral;
+  margin-left: 		50px;
+  width:          800px; 
+  line-height:    35px;
+}
+
+#footer {
+	position: 			absolute;
+	left: 				0;
+	bottom: 			0;
+	width: 				100%
+	background-color:	powderblue;
+	color:				black;
+	text-align: 		center;
+	font-size: 			50%;
+}
